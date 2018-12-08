@@ -1,0 +1,61 @@
+{{!-- Title --}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img class="burgerImage" src="/public/assets/img/burger.jpg" alt="hamburger" width="200px" height="250px">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 id="title">EAT THAT BURGER</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h4 class="available-burgers">Available Burgers</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    {{#each data}}
+                    {{#unless this.devoured}}
+                    <div class="row uneaten burgers">
+                        <p class="uneaten-burgers-display">{{this.id}}. {{this.burger_name}}</p>
+                        <form method="POST" action="/burgers/update?_method=PUT" class="button-size form-inline">
+                        <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                        <button type="submit" class="btn btn-secondary btn-sm float-right devour-btn">Devour</button>                        
+                        </form>
+                    </div>
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 id="unavailable-burgers">Devoured Burgers</h4>
+                    {{#each data}}
+                    {{#if this.devoured}}
+                    <form class="form-control eaten-burgers" type="text">{{this.id}}. {{this.burger_name}}</form>
+                    {{/if}}
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h4 id="enter-burger">Name a burger you want to eat.</h4>
+            <form action="/burgers/create" method="POST">
+            <input type="text" name="burger_name" class="form-control" id="userInput">
+            <button type="submit" class="btn btn-secondary" id="text-enter-button">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
