@@ -21,3 +21,44 @@ body {
     font-family: 'Concert One', cursive;
     margin-bottom: 22px;
 }
+
+.uneaten-burgers {
+    background: white;
+    color: black;
+    width: 90%;
+    float: right;
+    margin: 5px auto;
+    text-align: center;
+    height: calc(2.25rem + 3px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.uneaten-burgers-display{
+    margin: auto;
+}
+
+#devour-btn{
+    text-align: right;
+
+}
+
+.eaten-burgers{
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    color: black;
+}
+
+#enter-burger{
+    margin-top: 5%;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+#userInput{
+    width: 50%;
+    margin: 1% auto 1% auto;
+}
