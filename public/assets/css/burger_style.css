@@ -1,0 +1,23 @@
+body {
+    background: rgb(204, 177, 103)
+}
+
+#title {
+    font-family: 'Dokdo', cursive;
+    margin-top: 10px;
+}
+
+.burgerImage {
+    margin-top: 15px;
+    margin-bottom: 1px;
+}
+
+.available-burgers{
+    font-family: 'Concert One', cursive;
+    padding: 4px;
+}
+
+#unavailable-burgers{
+    font-family: 'Concert One', cursive;
+    margin-bottom: 22px;
+}

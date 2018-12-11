@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
-            <img class="burgerImage" src="/public/assets/img/burger.jpg" alt="hamburger" width="200px" height="250px">
+            <img class="burgerImage" src="/assets/img/burger.jpg" alt="hamburger" width="200px" height="250px">
         </div>
     </div>
     <div class="row">
@@ -20,7 +20,7 @@
                 <div class="col-md-12">
                     {{#each data}}
                     {{#unless this.devoured}}
-                    <div class="row uneaten burgers">
+                    <div class="row uneaten-burgers">
                         <p class="uneaten-burgers-display">{{this.id}}. {{this.burger_name}}</p>
                         <form method="POST" action="/burgers/update?_method=PUT" class="button-size form-inline">
                         <input type="hidden" name="burger_id" type="text" value={{this.id}}>
