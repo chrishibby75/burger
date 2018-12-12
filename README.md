@@ -21,3 +21,4 @@ Players can create the name of any burger they like, or devour the ones that are
 
 ## Screenshot
 
+![GitHub Logo](/public/assets/img/demo.JPG)
